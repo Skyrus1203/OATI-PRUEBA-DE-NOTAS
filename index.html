@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba OATI</title>
+</head>
+
+<body>
+    <h1>NOTAS DEL ESTUDIANTE</h1>
+    <table id="tablaNotas">
+        <thead>
+            <tr>
+                <th>Código del estudiante</th>
+                <th>Nombre del estudiante</th>
+                <th>Nombre de la materia</th>
+                <th>Nota</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpoTabla">
+
+        </tbody>
+    </table>
+    <br><br><br>
+    <label for="id">Ingrese el código del estudiante: </label>
+    <input type="text" id="id" name="id">
+    <button onclick="cargarNotas()">CARGAR NOTAS</button>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const tablaNotas=document.getElementById('tablaNotas');
+            function cargarNotas(){
+            var id=document.getElementById("id").value;
+            fetch('http://localhost:4000/api/notas/'+id).then(response=>response.json()).then(data=>{
+                tablaNotas.innerHTML='';
+                data.data.forEach(item=>{
+                    const fila=tablaNotas.InsertRow();
+                    fila.insertCell(0).textContent=item.idEstudiante;
+                    fila.insertCell(1).textContent=item.nombreEstudiante;
+                    fila.insertCell(2).textContent=item.nombreMateria;
+                    fila.insertCell(3).textContent=item.nota;
+                });
+            }).catch(error=>console.error('Error al obtener los datos de la API:', error));
+        }
+        });
+        
+    </script>
+</body>
+
+</html>
