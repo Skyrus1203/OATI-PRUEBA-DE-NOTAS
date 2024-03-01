@@ -1,4 +1,3 @@
-
 # Prueba OATI Nota estudiantes
 
 Prueba API REST para la OATI. consistente en realizar una API REST que por medio de dos End Points se permitiese realizar tanto la inserción de notas (La cual podía probarse por medio de POSTMAN) y la consulta de las mismas (la cual se realizaba por medio de un Front End)
@@ -7,13 +6,25 @@ Prueba API REST para la OATI. consistente en realizar una API REST que por medio
 
 
 ## Screenshots
+INGRESO DE ESTUDIANTES
+![App Screenshot](https://raw.githubusercontent.com/Skyrus1203/OATI-PRUEBA-DE-NOTAS/master/Imagenes/Captura%20de%20pantalla%202024-02-29%20193925.png)
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
+COMPROBACIÓN EN BD
+![App Screenshot](https://raw.githubusercontent.com/Skyrus1203/OATI-PRUEBA-DE-NOTAS/master/Imagenes/Captura%20de%20pantalla%202024-02-29%20193937.png)
+
+CONSULTA DE NOTAS
+![App Screenshot](https://raw.githubusercontent.com/Skyrus1203/OATI-PRUEBA-DE-NOTAS/master/Imagenes/Captura%20de%20pantalla%202024-02-29%20194013.png)
+
+INGRESO DE NOTAS:
+![App Screenshot](https://raw.githubusercontent.com/Skyrus1203/OATI-PRUEBA-DE-NOTAS/master/Imagenes/Captura%20de%20pantalla%202024-02-29%20194439.png)
+
+COMPROBACIÓN EN BD:
+![App Screenshot](https://raw.githubusercontent.com/Skyrus1203/OATI-PRUEBA-DE-NOTAS/master/Imagenes/Captura%20de%20pantalla%202024-02-29%20201844.png)
 
 ## Funcionamiento
 
-Para que el proyecto funcione es necesario ingresar en el .env (si no existe crearlo) las siguientes variables a modo de credenciales, las cuales deben ser reemplazadas por las configuraciónes locales respectivas.
+Para que el proyecto funcione es necesario ingresar en el .env (si no existe crearlo) las siguientes variables a modo de credenciales, las cuales deben ser reemplazadas por las configuraciónes locales respectivas. No se logró hacer funcionar la interfaz con la API sin embargo los EndPoints son totalmente funcionales, por lo que se pueden probar con POSTMAN.
 
 El archivo exportado de la base de datos se encuentra en la raiz del proyecto por lo que será necesario cargarla en PHPMyAdmin o bien en MySQL Workbench.
 
@@ -62,4 +73,3 @@ Y enviar un JSON de la siguiente forma:
   }
 ```
 Por poner un ejemplo
-
